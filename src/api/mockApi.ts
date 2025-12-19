@@ -7,14 +7,22 @@ import {
   KhenThuong, 
   KyLuat, 
   ThongKePhongGiam,
-  PhongGiam 
+  PhongGiam,
+  SucKhoe,
+  ThamGap,
+  LaoDong,
+  SuCo
 } from '@/types';
 import { 
   mockCanBo, 
   mockPhamNhan, 
   mockKhenThuong, 
   mockKyLuat, 
-  mockPhongGiam 
+  mockPhongGiam,
+  mockSucKhoe,
+  mockThamGap,
+  mockLaoDong,
+  mockSuCo
 } from '@/data/mockData';
 
 // Simulate network delay
@@ -26,6 +34,10 @@ let phamNhanData = [...mockPhamNhan];
 let khenThuongData = [...mockKhenThuong];
 let kyLuatData = [...mockKyLuat];
 let phongGiamData = [...mockPhongGiam];
+let sucKhoeData = [...mockSucKhoe];
+let thamGapData = [...mockThamGap];
+let laoDongData = [...mockLaoDong];
+let suCoData = [...mockSuCo];
 
 // ============== CAN BO API ==============
 export const canBoApi = {
@@ -205,6 +217,127 @@ export const kyLuatApi = {
     const index = kyLuatData.findIndex(kl => kl.Id === id);
     if (index === -1) return false;
     kyLuatData.splice(index, 1);
+    return true;
+  },
+};
+
+// ============== SUC KHOE API ==============
+export const sucKhoeApi = {
+  getAll: async (): Promise<SucKhoe[]> => {
+    await delay(300);
+    return sucKhoeData.map(sk => ({
+      ...sk,
+      PhamNhan: phamNhanData.find(pn => pn.Id === sk.PhamNhanId),
+    }));
+  },
+
+  create: async (sucKhoe: Omit<SucKhoe, 'Id'>): Promise<SucKhoe> => {
+    await delay(300);
+    const newSK: SucKhoe = {
+      ...sucKhoe,
+      Id: Math.max(...sucKhoeData.map(sk => sk.Id), 0) + 1,
+    };
+    sucKhoeData.push(newSK);
+    return newSK;
+  },
+
+  delete: async (id: number): Promise<boolean> => {
+    await delay(300);
+    const index = sucKhoeData.findIndex(sk => sk.Id === id);
+    if (index === -1) return false;
+    sucKhoeData.splice(index, 1);
+    return true;
+  },
+};
+
+// ============== THAM GAP API ==============
+export const thamGapApi = {
+  getAll: async (): Promise<ThamGap[]> => {
+    await delay(300);
+    return thamGapData.map(tg => ({
+      ...tg,
+      PhamNhan: phamNhanData.find(pn => pn.Id === tg.PhamNhanId),
+    }));
+  },
+
+  create: async (thamGap: Omit<ThamGap, 'Id'>): Promise<ThamGap> => {
+    await delay(300);
+    const newTG: ThamGap = {
+      ...thamGap,
+      Id: Math.max(...thamGapData.map(tg => tg.Id), 0) + 1,
+    };
+    thamGapData.push(newTG);
+    return newTG;
+  },
+
+  delete: async (id: number): Promise<boolean> => {
+    await delay(300);
+    const index = thamGapData.findIndex(tg => tg.Id === id);
+    if (index === -1) return false;
+    thamGapData.splice(index, 1);
+    return true;
+  },
+};
+
+// ============== LAO DONG API ==============
+export const laoDongApi = {
+  getAll: async (): Promise<LaoDong[]> => {
+    await delay(300);
+    return laoDongData.map(ld => ({
+      ...ld,
+      PhamNhan: phamNhanData.find(pn => pn.Id === ld.PhamNhanId),
+    }));
+  },
+
+  create: async (laoDong: Omit<LaoDong, 'Id'>): Promise<LaoDong> => {
+    await delay(300);
+    const newLD: LaoDong = {
+      ...laoDong,
+      Id: Math.max(...laoDongData.map(ld => ld.Id), 0) + 1,
+    };
+    laoDongData.push(newLD);
+    return newLD;
+  },
+
+  delete: async (id: number): Promise<boolean> => {
+    await delay(300);
+    const index = laoDongData.findIndex(ld => ld.Id === id);
+    if (index === -1) return false;
+    laoDongData.splice(index, 1);
+    return true;
+  },
+};
+
+// ============== SU CO API ==============
+export const suCoApi = {
+  getAll: async (): Promise<SuCo[]> => {
+    await delay(300);
+    return [...suCoData];
+  },
+
+  create: async (suCo: Omit<SuCo, 'Id'>): Promise<SuCo> => {
+    await delay(300);
+    const newSC: SuCo = {
+      ...suCo,
+      Id: Math.max(...suCoData.map(sc => sc.Id), 0) + 1,
+    };
+    suCoData.push(newSC);
+    return newSC;
+  },
+
+  update: async (id: number, suCo: Partial<SuCo>): Promise<SuCo | undefined> => {
+    await delay(300);
+    const index = suCoData.findIndex(sc => sc.Id === id);
+    if (index === -1) return undefined;
+    suCoData[index] = { ...suCoData[index], ...suCo };
+    return suCoData[index];
+  },
+
+  delete: async (id: number): Promise<boolean> => {
+    await delay(300);
+    const index = suCoData.findIndex(sc => sc.Id === id);
+    if (index === -1) return false;
+    suCoData.splice(index, 1);
     return true;
   },
 };

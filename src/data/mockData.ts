@@ -5,7 +5,11 @@ import {
   PhongGiam, 
   PhamNhan, 
   KhenThuong, 
-  KyLuat 
+  KyLuat,
+  SucKhoe,
+  ThamGap,
+  LaoDong,
+  SuCo
 } from '@/types';
 
 export const mockQuyen: Quyen[] = [
@@ -151,5 +155,106 @@ export const mockKyLuat: KyLuat[] = [
     HinhThuc: 'Biệt giam 7 ngày',
     ThoiHan: '7 ngày',
     NguoiKy: 'Lê Minh Cường',
+  },
+];
+
+export const mockSucKhoe: SucKhoe[] = [
+  {
+    Id: 1,
+    PhamNhanId: 1,
+    NgayKham: '2024-01-15',
+    LoaiKham: 'DinhKy',
+    ChanDoan: 'Sức khỏe bình thường',
+    DieuTri: 'Không cần điều trị',
+    BacSi: 'BS. Nguyễn Văn Minh',
+  },
+  {
+    Id: 2,
+    PhamNhanId: 2,
+    NgayKham: '2024-01-20',
+    LoaiKham: 'DotXuat',
+    ChanDoan: 'Viêm họng cấp',
+    DieuTri: 'Kháng sinh, thuốc giảm đau',
+    BacSi: 'BS. Trần Thị Lan',
+    GhiChu: 'Theo dõi 3 ngày',
+  },
+];
+
+export const mockThamGap: ThamGap[] = [
+  {
+    Id: 1,
+    PhamNhanId: 1,
+    NgayThamGap: '2024-01-10',
+    NguoiThamGap: 'Hoàng Thị Mai',
+    QuanHe: 'Vợ',
+    CMND: '012345678901',
+    ThoiGianBatDau: '09:00',
+    ThoiGianKetThuc: '10:00',
+    NoiDungTiepTe: 'Quần áo, đồ dùng cá nhân',
+  },
+  {
+    Id: 2,
+    PhamNhanId: 3,
+    NgayThamGap: '2024-01-12',
+    NguoiThamGap: 'Ngô Văn Bình',
+    QuanHe: 'Anh trai',
+    CMND: '012345678902',
+    ThoiGianBatDau: '14:00',
+    ThoiGianKetThuc: '15:00',
+    NoiDungTiepTe: 'Thực phẩm, sách vở',
+  },
+];
+
+export const mockLaoDong: LaoDong[] = [
+  {
+    Id: 1,
+    PhamNhanId: 1,
+    LoaiHoatDong: 'LaoDong',
+    TenHoatDong: 'Làm mộc',
+    NgayBatDau: '2023-06-01',
+    KetQua: 'Hoàn thành tốt',
+    DanhGia: 'Tot',
+  },
+  {
+    Id: 2,
+    PhamNhanId: 2,
+    LoaiHoatDong: 'HocTap',
+    TenHoatDong: 'Học văn hóa lớp 9',
+    NgayBatDau: '2023-09-01',
+    DanhGia: 'Kha',
+  },
+  {
+    Id: 3,
+    PhamNhanId: 3,
+    LoaiHoatDong: 'LaoDong',
+    TenHoatDong: 'Trồng rau',
+    NgayBatDau: '2023-03-15',
+    KetQua: 'Năng suất cao',
+    DanhGia: 'Tot',
+  },
+];
+
+export const mockSuCo: SuCo[] = [
+  {
+    Id: 1,
+    NgayXayRa: '2024-01-05',
+    LoaiSuCo: 'AnNinh',
+    MoTa: 'Xô xát giữa hai phạm nhân tại sân chơi',
+    MucDo: 'Vua',
+    PhamNhanLienQuan: 'PN002, PN004',
+    BienPhapXuLy: 'Tách riêng hai phạm nhân, lập biên bản',
+    NguoiBaoCao: 'Lê Minh Cường',
+    TrangThai: 'DaXuLy',
+  },
+  {
+    Id: 2,
+    NgayXayRa: '2024-01-18',
+    LoaiSuCo: 'YTe',
+    MoTa: 'Phạm nhân bị ngất do sốt cao',
+    MucDo: 'Vua',
+    PhamNhanLienQuan: 'PN001',
+    BienPhapXuLy: 'Chuyển bệnh xá điều trị',
+    NguoiBaoCao: 'Trần Thị Bình',
+    TrangThai: 'DaXuLy',
   },
 ];

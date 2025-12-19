@@ -11,7 +11,10 @@ import CanBoManagement from "./pages/CanBoManagement";
 import PhamNhanManagement from "./pages/PhamNhanManagement";
 import KhenThuongKyLuatManagement from "./pages/KhenThuongKyLuatManagement";
 import BaoCaoThongKe from "./pages/BaoCaoThongKe";
-import { SucKhoePage, ThamGapPage, LaoDongPage, SuCoPage } from "./pages/ComingSoonPages";
+import SucKhoeManagement from "./pages/SucKhoeManagement";
+import ThamGapManagement from "./pages/ThamGapManagement";
+import LaoDongManagement from "./pages/LaoDongManagement";
+import SuCoManagement from "./pages/SuCoManagement";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,10 +33,10 @@ const App = () => (
             <Route path="/pham-nhan" element={<ProtectedRoute><PhamNhanManagement /></ProtectedRoute>} />
             <Route path="/khen-thuong-ky-luat" element={<ProtectedRoute><KhenThuongKyLuatManagement /></ProtectedRoute>} />
             <Route path="/bao-cao" element={<ProtectedRoute><BaoCaoThongKe /></ProtectedRoute>} />
-            <Route path="/suc-khoe" element={<ProtectedRoute allowedRoles={['Admin', 'CanBo']}><SucKhoePage /></ProtectedRoute>} />
-            <Route path="/tham-gap" element={<ProtectedRoute allowedRoles={['Admin', 'CanBo']}><ThamGapPage /></ProtectedRoute>} />
-            <Route path="/lao-dong" element={<ProtectedRoute allowedRoles={['Admin', 'CanBo']}><LaoDongPage /></ProtectedRoute>} />
-            <Route path="/su-co" element={<ProtectedRoute allowedRoles={['Admin', 'CanBo']}><SuCoPage /></ProtectedRoute>} />
+            <Route path="/suc-khoe" element={<ProtectedRoute allowedRoles={['Admin', 'CanBo']}><SucKhoeManagement /></ProtectedRoute>} />
+            <Route path="/tham-gap" element={<ProtectedRoute allowedRoles={['Admin', 'CanBo']}><ThamGapManagement /></ProtectedRoute>} />
+            <Route path="/lao-dong" element={<ProtectedRoute allowedRoles={['Admin', 'CanBo']}><LaoDongManagement /></ProtectedRoute>} />
+            <Route path="/su-co" element={<ProtectedRoute allowedRoles={['Admin', 'CanBo']}><SuCoManagement /></ProtectedRoute>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

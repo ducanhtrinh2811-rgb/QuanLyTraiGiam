@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
 import { AuthUser, QuyenType } from '@/types';
-import { mockTaiKhoan, mockQuyen } from '@/data/mockData';
+import { authApi } from '@/api/mockApi';
 
 interface AuthContextType {
   user: AuthUser | null;
@@ -15,36 +15,43 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<AuthUser | null>(() => {
     const savedUser = localStorage.getItem('auth_user');
-    return savedUser ? JSON.parse(savedUser) : null;
+    if (savedUser) {
+      try {
+        const parsed = JSON.parse(savedUser);
+        return parsed.user || parsed;
+      } catch {
+        return null;
+      }
+    }
+    return null;
   });
 
   const login = useCallback(async (username: string, password: string) => {
-    // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 500));
+    try {
+      const result = await authApi.login(username, password);
 
-    const account = mockTaiKhoan.find(
-      acc => acc.Ten === username && acc.MatKhauHash === password && acc.IsActive
-    );
+      if (!result.success) {
+        return { success: false, error: result.error || 'Đăng nhập thất bại' };
+      }
 
-    if (!account) {
-      return { success: false, error: 'Tên đăng nhập hoặc mật khẩu không đúng' };
+      const authUser: AuthUser = {
+        id: result.user.id,
+        username: result.user.username,
+        role: result.user.role as QuyenType,
+        canBoId: result.user.canBoId,
+      };
+
+      setUser(authUser);
+      localStorage.setItem('auth_user', JSON.stringify({
+        user: authUser,
+        token: result.token,
+      }));
+
+      return { success: true };
+    } catch (error) {
+      console.error('Login error:', error);
+      return { success: false, error: 'Không thể kết nối đến server' };
     }
-
-    const role = mockQuyen.find(q => q.Id === account.QuyenId);
-    if (!role) {
-      return { success: false, error: 'Tài khoản không có quyền truy cập' };
-    }
-
-    const authUser: AuthUser = {
-      id: account.Id,
-      username: account.Ten,
-      role: role.TenQuyen,
-    };
-
-    setUser(authUser);
-    localStorage.setItem('auth_user', JSON.stringify(authUser));
-
-    return { success: true };
   }, []);
 
   const logout = useCallback(() => {

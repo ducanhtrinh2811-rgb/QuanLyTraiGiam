@@ -1,0 +1,92 @@
+<Page x:Class="PrisonManagement.Views.Pages.DashboardPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Dashboard">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="30">
+            <!-- Header -->
+            <TextBlock Text="📊 Dashboard" FontSize="28" FontWeight="Bold" 
+                       Foreground="#1e3a5f" Margin="0,0,0,30"/>
+
+            <!-- Stats Cards -->
+            <UniformGrid Columns="4" Margin="0,0,0,30">
+                <!-- Tổng phạm nhân -->
+                <Border Background="White" CornerRadius="10" Margin="10" Padding="20">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="10" Opacity="0.1" ShadowDepth="2"/>
+                    </Border.Effect>
+                    <StackPanel>
+                        <TextBlock Text="👤" FontSize="32"/>
+                        <TextBlock x:Name="txtTongPhamNhan" Text="0" FontSize="36" 
+                                   FontWeight="Bold" Foreground="#3182ce"/>
+                        <TextBlock Text="Tổng phạm nhân" Foreground="#666"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Tổng cán bộ -->
+                <Border Background="White" CornerRadius="10" Margin="10" Padding="20">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="10" Opacity="0.1" ShadowDepth="2"/>
+                    </Border.Effect>
+                    <StackPanel>
+                        <TextBlock Text="👮" FontSize="32"/>
+                        <TextBlock x:Name="txtTongCanBo" Text="0" FontSize="36" 
+                                   FontWeight="Bold" Foreground="#38a169"/>
+                        <TextBlock Text="Tổng cán bộ" Foreground="#666"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Tổng phòng giam -->
+                <Border Background="White" CornerRadius="10" Margin="10" Padding="20">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="10" Opacity="0.1" ShadowDepth="2"/>
+                    </Border.Effect>
+                    <StackPanel>
+                        <TextBlock Text="🚪" FontSize="32"/>
+                        <TextBlock x:Name="txtTongPhongGiam" Text="0" FontSize="36" 
+                                   FontWeight="Bold" Foreground="#805ad5"/>
+                        <TextBlock Text="Phòng giam" Foreground="#666"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Sự cố trong tháng -->
+                <Border Background="White" CornerRadius="10" Margin="10" Padding="20">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="10" Opacity="0.1" ShadowDepth="2"/>
+                    </Border.Effect>
+                    <StackPanel>
+                        <TextBlock Text="🚨" FontSize="32"/>
+                        <TextBlock x:Name="txtSuCoThang" Text="0" FontSize="36" 
+                                   FontWeight="Bold" Foreground="#e53e3e"/>
+                        <TextBlock Text="Sự cố tháng này" Foreground="#666"/>
+                    </StackPanel>
+                </Border>
+            </UniformGrid>
+
+            <!-- Quick Actions -->
+            <TextBlock Text="Thao tác nhanh" FontSize="20" FontWeight="Bold" 
+                       Foreground="#1e3a5f" Margin="0,20,0,15"/>
+            
+            <WrapPanel>
+                <Button Content="➕ Thêm phạm nhân" Margin="5" Padding="20,10"
+                        Background="#3182ce" Foreground="White" BorderThickness="0"
+                        FontSize="14" Cursor="Hand"/>
+                <Button Content="📋 Xem báo cáo" Margin="5" Padding="20,10"
+                        Background="#38a169" Foreground="White" BorderThickness="0"
+                        FontSize="14" Cursor="Hand"/>
+                <Button Content="🏥 Thêm hồ sơ sức khỏe" Margin="5" Padding="20,10"
+                        Background="#805ad5" Foreground="White" BorderThickness="0"
+                        FontSize="14" Cursor="Hand"/>
+                <Button Content="👥 Đăng ký thăm gặp" Margin="5" Padding="20,10"
+                        Background="#dd6b20" Foreground="White" BorderThickness="0"
+                        FontSize="14" Cursor="Hand"/>
+            </WrapPanel>
+
+            <!-- Loading indicator -->
+            <TextBlock x:Name="txtLoading" Text="Đang tải dữ liệu..." 
+                       Foreground="#666" FontStyle="Italic" Margin="0,20,0,0"
+                       Visibility="Visible"/>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

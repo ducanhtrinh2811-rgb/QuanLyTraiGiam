@@ -1,0 +1,85 @@
+<Page x:Class="PrisonManagement.Views.Pages.KyLuatPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Quản lý Kỷ luật">
+
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,20">
+            <TextBlock Text="⚖️ Quản lý Kỷ luật" FontSize="28" FontWeight="Bold" 
+                       Foreground="#1e3a5f" VerticalAlignment="Center"/>
+            <Button x:Name="btnAdd" Content="➕ Thêm mới" Margin="30,0,0,0"
+                    Padding="20,10" Background="#3182ce" Foreground="White"
+                    BorderThickness="0" FontSize="14" Cursor="Hand"
+                    Click="BtnAdd_Click"/>
+            <Button x:Name="btnRefresh" Content="🔄 Làm mới" Margin="10,0,0,0"
+                    Padding="20,10" Background="#38a169" Foreground="White"
+                    BorderThickness="0" FontSize="14" Cursor="Hand"
+                    Click="BtnRefresh_Click"/>
+        </StackPanel>
+
+        <!-- Search -->
+        <Border Grid.Row="1" Background="White" CornerRadius="5" Padding="15" Margin="0,0,0,20">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="🔍" FontSize="16" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <TextBox x:Name="txtSearch" Width="300" Height="35" Padding="10,5"
+                         FontSize="14" BorderBrush="#ddd"
+                         TextChanged="TxtSearch_TextChanged"/>
+                <TextBlock Text="Tìm theo lý do kỷ luật..." Foreground="#999" 
+                           VerticalAlignment="Center" Margin="10,0,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <!-- DataGrid -->
+        <Border Grid.Row="2" Background="White" CornerRadius="10" Padding="10">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="10" Opacity="0.1" ShadowDepth="2"/>
+            </Border.Effect>
+            <DataGrid x:Name="dgKyLuat" AutoGenerateColumns="False" 
+                      IsReadOnly="True" CanUserAddRows="False"
+                      GridLinesVisibility="Horizontal" 
+                      HeadersVisibility="Column"
+                      BorderThickness="0"
+                      RowHeight="45"
+                      SelectionMode="Single">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="60"/>
+                    <DataGridTextColumn Header="Phạm nhân" Binding="{Binding PhamNhanTen}" Width="150"/>
+                    <DataGridTextColumn Header="Ngày" Binding="{Binding NgayKyLuat, StringFormat=dd/MM/yyyy}" Width="100"/>
+                    <DataGridTextColumn Header="Loại" Binding="{Binding LoaiKyLuat}" Width="150"/>
+                    <DataGridTextColumn Header="Mức độ" Binding="{Binding MucDo}" Width="100"/>
+                    <DataGridTextColumn Header="Lý do" Binding="{Binding LyDo}" Width="250"/>
+                    <DataGridTemplateColumn Header="Thao tác" Width="150">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Content="✏️" Padding="8,5" Margin="2"
+                                            Background="#3182ce" Foreground="White"
+                                            BorderThickness="0" Cursor="Hand"
+                                            Click="BtnEdit_Click"/>
+                                    <Button Content="🗑️" Padding="8,5" Margin="2"
+                                            Background="#e53e3e" Foreground="White"
+                                            BorderThickness="0" Cursor="Hand"
+                                            Click="BtnDelete_Click"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+
+        <!-- Loading overlay -->
+        <Border x:Name="loadingOverlay" Grid.RowSpan="3" Background="#80FFFFFF" 
+                Visibility="Collapsed">
+            <TextBlock Text="Đang tải..." FontSize="18" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Border>
+    </Grid>
+</Page>

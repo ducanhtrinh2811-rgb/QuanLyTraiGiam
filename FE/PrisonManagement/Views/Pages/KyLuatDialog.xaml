@@ -1,0 +1,70 @@
+<Window x:Class="PrisonManagement.Views.Pages.KyLuatDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Thông tin Kỷ luật" 
+        Height="600" 
+        Width="500"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+    
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="30">
+        <TextBlock x:Name="txtTitle" 
+                   Text="Thêm kỷ luật" 
+                   FontSize="20" 
+                   FontWeight="Bold" 
+                   Foreground="#1e3a5f" 
+                   Margin="0,0,0,20"/>
+        
+        <TextBlock Text="Phạm nhân *" Margin="0,0,0,5"/>
+        <ComboBox x:Name="cboPhamNhan" 
+                  Height="35" 
+                  DisplayMemberPath="HoTen" 
+                  SelectedValuePath="Id"/>
+        
+        <TextBlock Text="Ngày kỷ luật *" Margin="0,15,0,5"/>
+        <DatePicker x:Name="dpNgay" Height="35"/>
+        
+        <TextBlock Text="Hình thức *" Margin="0,15,0,5"/>
+        <ComboBox x:Name="cboHinhThuc" Height="35">
+            <ComboBoxItem Content="Cảnh cáo"/>
+            <ComboBoxItem Content="Khiển trách"/>
+            <ComboBoxItem Content="Biệt giam"/>
+        </ComboBox>
+        
+        <TextBlock Text="Lý do *" Margin="0,15,0,5"/>
+        <TextBox x:Name="txtLyDo" 
+                 Height="60" 
+                 TextWrapping="Wrap"
+                 AcceptsReturn="True"
+                 VerticalScrollBarVisibility="Auto"/>
+        
+        <TextBlock Text="Thời hạn" Margin="0,15,0,5"/>
+        <TextBox x:Name="txtThoiHan" Height="35"/>
+        
+        <TextBlock Text="Người ký *" Margin="0,15,0,5"/>
+        <TextBox x:Name="txtNguoiKy" Height="35"/>
+        
+        <StackPanel Orientation="Horizontal" 
+                    HorizontalAlignment="Right" 
+                    Margin="0,30,0,0">
+            <Button Content="Hủy" 
+                    Width="100" 
+                    Height="40" 
+                    Margin="0,0,10,0" 
+                    Background="#e0e0e0" 
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Click="BtnCancel_Click"/>
+            <Button Content="Lưu" 
+                    Width="100" 
+                    Height="40" 
+                    Background="#3182ce" 
+                    Foreground="White" 
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Click="BtnSave_Click"/>
+        </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

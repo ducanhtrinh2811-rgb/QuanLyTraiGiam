@@ -1,0 +1,63 @@
+<Window x:Class="PrisonManagement.Views.Pages.CanBoDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Thông tin Cán bộ" 
+        Height="550" Width="500"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+    
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="30">
+            <TextBlock x:Name="txtTitle" Text="Thêm cán bộ mới" 
+                       FontSize="20" FontWeight="Bold" Foreground="#1e3a5f"
+                       Margin="0,0,0,20"/>
+
+            <!-- Mã cán bộ -->
+            <TextBlock Text="Mã cán bộ *" Margin="0,0,0,5"/>
+            <TextBox x:Name="txtMaCanBo" Height="35" Padding="10,5" FontSize="14"/>
+
+            <!-- Họ tên -->
+            <TextBlock Text="Họ tên *" Margin="0,15,0,5"/>
+            <TextBox x:Name="txtHoTen" Height="35" Padding="10,5" FontSize="14"/>
+
+            <!-- Ngày sinh -->
+            <TextBlock Text="Ngày sinh" Margin="0,15,0,5"/>
+            <DatePicker x:Name="dpNgaySinh" Height="35"/>
+
+            <!-- Giới tính -->
+            <TextBlock Text="Giới tính" Margin="0,15,0,5"/>
+            <ComboBox x:Name="cboGioiTinh" Height="35">
+                <ComboBoxItem Content="Nam"/>
+                <ComboBoxItem Content="Nữ"/>
+            </ComboBox>
+
+            <!-- Chức vụ -->
+            <TextBlock Text="Chức vụ" Margin="0,15,0,5"/>
+            <TextBox x:Name="txtChucVu" Height="35" Padding="10,5" FontSize="14"/>
+
+            <!-- Phòng phụ trách -->
+            <TextBlock Text="Phòng phụ trách" Margin="0,15,0,5"/>
+            <TextBox x:Name="txtPhongPhuTrach" Height="35" Padding="10,5" FontSize="14"/>
+
+            <!-- SĐT -->
+            <TextBlock Text="Số điện thoại" Margin="0,15,0,5"/>
+            <TextBox x:Name="txtSDT" Height="35" Padding="10,5" FontSize="14"/>
+
+            <!-- Địa chỉ -->
+            <TextBlock Text="Địa chỉ" Margin="0,15,0,5"/>
+            <TextBox x:Name="txtDiaChi" Height="60" Padding="10,5" FontSize="14"
+                     TextWrapping="Wrap" AcceptsReturn="True"/>
+
+            <!-- Buttons -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,30,0,0">
+                <Button Content="Hủy" Width="100" Height="40" Margin="0,0,10,0"
+                        Background="#e0e0e0" BorderThickness="0" FontSize="14"
+                        Click="BtnCancel_Click" Cursor="Hand"/>
+                <Button x:Name="btnSave" Content="Lưu" Width="100" Height="40"
+                        Background="#3182ce" Foreground="White" 
+                        BorderThickness="0" FontSize="14"
+                        Click="BtnSave_Click" Cursor="Hand"/>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

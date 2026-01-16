@@ -50,7 +50,7 @@
                       SelectionMode="Single">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="60"/>
-                    <DataGridTextColumn Header="Ngày" Binding="{Binding NgaySuCo, StringFormat=dd/MM/yyyy}" Width="100"/>
+                    <DataGridTextColumn Header="Ngày" Binding="{Binding NgayXayRa, StringFormat=dd/MM/yyyy}" Width="100"/>
                     <DataGridTextColumn Header="Loại" Binding="{Binding LoaiSuCo}" Width="120"/>
                     <DataGridTextColumn Header="Mức độ" Binding="{Binding MucDo}" Width="100"/>
                     <DataGridTextColumn Header="Mô tả" Binding="{Binding MoTa}" Width="250"/>

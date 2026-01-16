@@ -27,9 +27,9 @@
         
         <TextBlock Text="Loại khám" Margin="0,15,0,5"/>
         <ComboBox x:Name="cboLoaiKham" Height="35">
-            <ComboBoxItem Content="DinhKy" IsSelected="True"/>
-            <ComboBoxItem Content="DotXuat"/>
-            <ComboBoxItem Content="NhapVien"/>
+            <ComboBoxItem Content="Định Kỳ" IsSelected="True"/>
+            <ComboBoxItem Content="Đột Xuất"/>
+            <ComboBoxItem Content="Nhập Viện"/>
         </ComboBox>
         
         <TextBlock Text="Chẩn đoán" Margin="0,15,0,5"/>

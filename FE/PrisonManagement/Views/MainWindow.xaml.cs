@@ -17,8 +17,6 @@ namespace PrisonManagement.Views
             _apiService = apiService;
             _hoTen = hoTen;
             _chucVu = chucVu;
-
-            txtUserInfo.Text = $"👤 {hoTen}\n📋 {chucVu}";
             
             // Load PhamNhan by default
             MainFrame.Navigate(new PhamNhanPage(_apiService));

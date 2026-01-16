@@ -13,10 +13,9 @@ namespace PrisonManagement.Models
         public string ToiDanh { get; set; } = string.Empty;
         public DateTime NgayVaoTrai { get; set; }
         public DateTime? NgayRaTrai { get; set; }
-        public string MucDoNguyHiem { get; set; } = string.Empty;
         public string TrangThai { get; set; } = string.Empty;
         public int? PhongGiamId { get; set; }
-        public string? PhongGiamTen { get; set; }
+        public PhongGiam? PhongGiam { get; set; }
         public string? GhiChu { get; set; }
     }
 
@@ -29,11 +28,8 @@ namespace PrisonManagement.Models
         public DateTime? NgaySinh { get; set; }
         public string? GioiTinh { get; set; }
         public string? ChucVu { get; set; }
-        public string? PhongBan { get; set; }
         public string? PhongPhuTrach { get; set; }
-        public string? SoDienThoai { get; set; }
         public string? SDT { get; set; }
-        public string? Email { get; set; }
         public string? DiaChi { get; set; }
         public string TrangThai { get; set; } = "HoatDong";
     }

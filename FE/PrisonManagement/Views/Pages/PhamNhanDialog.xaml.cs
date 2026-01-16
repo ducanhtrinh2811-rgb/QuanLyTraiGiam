@@ -31,7 +31,6 @@ namespace PrisonManagement.Views.Pages
             {
                 dpNgayVaoTrai.SelectedDate = DateTime.Today;
                 cboTrangThai.SelectedIndex = 0;
-                cboMucDoNguyHiem.SelectedIndex = 0;
                 cboGioiTinh.SelectedIndex = 0;
             }
         }
@@ -64,7 +63,6 @@ namespace PrisonManagement.Views.Pages
 
             // Set combo boxes
             SetComboBoxByText(cboGioiTinh, phamNhan.GioiTinh);
-            SetComboBoxByText(cboMucDoNguyHiem, phamNhan.MucDoNguyHiem);
             SetComboBoxByText(cboTrangThai, phamNhan.TrangThai);
         }
 
@@ -116,7 +114,6 @@ namespace PrisonManagement.Views.Pages
                 GioiTinh = (cboGioiTinh.SelectedItem as System.Windows.Controls.ComboBoxItem)?.Content?.ToString() ?? "Nam",
                 QueQuan = txtQueQuan.Text.Trim(),
                 ToiDanh = txtToiDanh.Text.Trim(),
-                MucDoNguyHiem = (cboMucDoNguyHiem.SelectedItem as System.Windows.Controls.ComboBoxItem)?.Content?.ToString() ?? "Thấp",
                 NgayVaoTrai = dpNgayVaoTrai.SelectedDate ?? DateTime.Today,
                 PhongGiamId = (int)cboPhongGiam.SelectedValue,
                 TrangThai = (cboTrangThai.SelectedItem as System.Windows.Controls.ComboBoxItem)?.Content?.ToString() ?? "Đang thụ án",

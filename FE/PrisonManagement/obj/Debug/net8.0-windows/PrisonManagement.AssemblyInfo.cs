@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PrisonManagement")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ceff94556a3f6f78c6029fb0b2b26f65fd23f6cd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af412e07f692c9408b5a839d573ec2864cd2ffb3")]
 [assembly: System.Reflection.AssemblyProductAttribute("PrisonManagement")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PrisonManagement")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

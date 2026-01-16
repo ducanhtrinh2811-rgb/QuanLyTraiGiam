@@ -21,11 +21,11 @@
             
             <TextBlock Text="Loại sự cố" Margin="0,15,0,5"/>
             <ComboBox x:Name="cboLoaiSuCo" Height="35">
-                <ComboBoxItem Content="AnNinh"/>
-                <ComboBoxItem Content="YTe"/>
-                <ComboBoxItem Content="ChayNo"/>
-                <ComboBoxItem Content="TronTrai"/>
-                <ComboBoxItem Content="Khac" IsSelected="True"/>
+                <ComboBoxItem Content="An Ninh"/>
+                <ComboBoxItem Content="Y Tế"/>
+                <ComboBoxItem Content="Cháy Nổ"/>
+                <ComboBoxItem Content="Trốn Trại"/>
+                <ComboBoxItem Content="Khác" IsSelected="True"/>
             </ComboBox>
             
             <TextBlock Text="Mô tả *" Margin="0,15,0,5"/>
@@ -37,9 +37,9 @@
             
             <TextBlock Text="Mức độ" Margin="0,15,0,5"/>
             <ComboBox x:Name="cboMucDo" Height="35">
-                <ComboBoxItem Content="Nhe" IsSelected="True"/>
-                <ComboBoxItem Content="Vua"/>
-                <ComboBoxItem Content="NghiemTrong"/>
+                <ComboBoxItem Content="Nhẹ" IsSelected="True"/>
+                <ComboBoxItem Content="Vừa"/>
+                <ComboBoxItem Content="Nghiêm trọng"/>
             </ComboBox>
             
             <TextBlock Text="Phạm nhân liên quan" Margin="0,15,0,5"/>
@@ -57,9 +57,9 @@
             
             <TextBlock Text="Trạng thái" Margin="0,15,0,5"/>
             <ComboBox x:Name="cboTrangThai" Height="35">
-                <ComboBoxItem Content="DangXuLy" IsSelected="True"/>
-                <ComboBoxItem Content="DaXuLy"/>
-                <ComboBoxItem Content="TheoDoi"/>
+                <ComboBoxItem Content="Đang xử lý" IsSelected="True"/>
+                <ComboBoxItem Content="Đã xử lý"/>
+                <ComboBoxItem Content="Theo dõi"/>
             </ComboBox>
             
             <StackPanel Orientation="Horizontal" 

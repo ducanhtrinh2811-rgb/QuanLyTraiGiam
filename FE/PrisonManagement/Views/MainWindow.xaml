@@ -61,31 +61,31 @@
                 <!-- Menu -->
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <StackPanel Margin="10">
-                        <Button Content=" Phạm nhân" Tag="PhamNhan" 
+                        <Button Content="👤 Quản lý Phạm nhân" Tag="PhamNhan" 
                                 Style="{StaticResource MenuButtonStyle}" 
                                 Click="MenuButton_Click"/>
-                        <Button Content="👮 Cán bộ" Tag="CanBo" 
+                        <Button Content="👮 Quản lý Cán bộ" Tag="CanBo" 
                                 Style="{StaticResource MenuButtonStyle}" 
                                 Click="MenuButton_Click"/>
-                        <Button Content="🚪 Phòng giam" Tag="PhongGiam" 
+                        <Button Content="🚪 Quản lý Phòng giam" Tag="PhongGiam" 
                                 Style="{StaticResource MenuButtonStyle}" 
                                 Click="MenuButton_Click"/>
-                        <Button Content="🏥 Sức khỏe" Tag="SucKhoe" 
+                        <Button Content="🏥 Quản lý Sức khỏe" Tag="SucKhoe" 
                                 Style="{StaticResource MenuButtonStyle}" 
                                 Click="MenuButton_Click"/>
-                        <Button Content="👥 Thăm gặp" Tag="ThamGap" 
+                        <Button Content="👥 Quản lý Thăm gặp" Tag="ThamGap" 
                                 Style="{StaticResource MenuButtonStyle}" 
                                 Click="MenuButton_Click"/>
-                        <Button Content="🔨 Lao động" Tag="LaoDong" 
+                        <Button Content="🔨 Quản lý Lao động" Tag="LaoDong" 
                                 Style="{StaticResource MenuButtonStyle}" 
                                 Click="MenuButton_Click"/>
-                        <Button Content="🏆 Khen thưởng" Tag="KhenThuong" 
+                        <Button Content="🏆 Quản lý Khen thưởng" Tag="KhenThuong" 
                                 Style="{StaticResource MenuButtonStyle}" 
                                 Click="MenuButton_Click"/>
-                        <Button Content="⚠️ Kỷ luật" Tag="KyLuat" 
+                        <Button Content="⚖️ Quản lý Kỷ luật" Tag="KyLuat" 
                                 Style="{StaticResource MenuButtonStyle}" 
                                 Click="MenuButton_Click"/>
-                        <Button Content="🚨 Sự cố" Tag="SuCo" 
+                        <Button Content="🚨 Quản lý Sự cố" Tag="SuCo" 
                                 Style="{StaticResource MenuButtonStyle}" 
                                 Click="MenuButton_Click"/>
                     </StackPanel>

@@ -35,9 +35,9 @@
             <!-- Trạng thái -->
             <TextBlock Text="Trạng thái" Margin="0,15,0,5"/>
             <ComboBox x:Name="cboTrangThai" Height="35">
-                <ComboBoxItem Content="HoatDong" IsSelected="True"/>
-                <ComboBoxItem Content="BaoTri"/>
-                <ComboBoxItem Content="DaKhoa"/>
+                <ComboBoxItem Content="Hoạt Động" IsSelected="True"/>
+                <ComboBoxItem Content="Bảo Trì"/>
+                <ComboBoxItem Content="Đã Khóa"/>
             </ComboBox>
 
             <!-- Buttons -->

@@ -54,8 +54,8 @@
                     <DataGridTextColumn Header="Ngày sinh" Binding="{Binding NgaySinh, StringFormat=dd/MM/yyyy}" Width="100"/>
                     <DataGridTextColumn Header="Giới tính" Binding="{Binding GioiTinh}" Width="80"/>
                     <DataGridTextColumn Header="Tội danh" Binding="{Binding ToiDanh}" Width="150"/>
-                    <DataGridTextColumn Header="Mức độ" Binding="{Binding MucDoNguyHiem}" Width="100"/>
-                    <DataGridTextColumn Header="Phòng giam" Binding="{Binding PhongGiamTen}" Width="100"/>
+                    <DataGridTextColumn Header="Ngày vào trại" Binding="{Binding NgayVaoTrai, StringFormat=dd/MM/yyyy}" Width="110"/>
+                    <DataGridTextColumn Header="Phòng giam" Binding="{Binding PhongGiam.TenPhong}" Width="100"/>
                     <DataGridTextColumn Header="Trạng thái" Binding="{Binding TrangThai}" Width="120"/>
                     <DataGridTemplateColumn Header="Thao tác" Width="150">
                         <DataGridTemplateColumn.CellTemplate>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\correctional-insight\\backend-csharp\\PrisonManagement.csproj": {}
+    "D:\\QLTG\\BE\\PrisonManagement.csproj": {}
   },
   "projects": {
-    "D:\\correctional-insight\\backend-csharp\\PrisonManagement.csproj": {
+    "D:\\QLTG\\BE\\PrisonManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\correctional-insight\\backend-csharp\\PrisonManagement.csproj",
+        "projectUniqueName": "D:\\QLTG\\BE\\PrisonManagement.csproj",
         "projectName": "PrisonManagement",
-        "projectPath": "D:\\correctional-insight\\backend-csharp\\PrisonManagement.csproj",
+        "projectPath": "D:\\QLTG\\BE\\PrisonManagement.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\correctional-insight\\backend-csharp\\obj\\",
+        "outputPath": "D:\\QLTG\\BE\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -92,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

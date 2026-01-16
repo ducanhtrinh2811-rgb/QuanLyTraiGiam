@@ -39,15 +39,6 @@
             <TextBlock Text="Phòng giam *" Margin="0,15,0,5"/>
             <ComboBox x:Name="cboPhongGiam" Height="35" DisplayMemberPath="TenPhong" SelectedValuePath="Id"/>
 
-            <!-- Mức độ nguy hiểm -->
-            <TextBlock Text="Mức độ nguy hiểm *" Margin="0,15,0,5"/>
-            <ComboBox x:Name="cboMucDoNguyHiem" Height="35">
-                <ComboBoxItem Content="Thấp"/>
-                <ComboBoxItem Content="Trung bình"/>
-                <ComboBoxItem Content="Cao"/>
-                <ComboBoxItem Content="Đặc biệt"/>
-            </ComboBox>
-
             <!-- Ngày vào trại -->
             <TextBlock Text="Ngày vào trại *" Margin="0,15,0,5"/>
             <DatePicker x:Name="dpNgayVaoTrai" Height="35"/>

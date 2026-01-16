@@ -27,8 +27,8 @@
         
         <TextBlock Text="Loại hoạt động" Margin="0,15,0,5"/>
         <ComboBox x:Name="cboLoaiHoatDong" Height="35">
-            <ComboBoxItem Content="LaoDong" IsSelected="True"/>
-            <ComboBoxItem Content="HocTap"/>
+            <ComboBoxItem Content="Lao Động" IsSelected="True"/>
+            <ComboBoxItem Content="Học Tập"/>
         </ComboBox>
         
         <TextBlock Text="Ngày bắt đầu *" Margin="0,15,0,5"/>
@@ -39,10 +39,10 @@
         
         <TextBlock Text="Đánh giá" Margin="0,15,0,5"/>
         <ComboBox x:Name="cboDanhGia" Height="35">
-            <ComboBoxItem Content="Tot"/>
-            <ComboBoxItem Content="Kha"/>
-            <ComboBoxItem Content="TrungBinh"/>
-            <ComboBoxItem Content="Yeu"/>
+            <ComboBoxItem Content="Tốt"/>
+            <ComboBoxItem Content="Khá"/>
+            <ComboBoxItem Content="Trung Bình"/>
+            <ComboBoxItem Content="Yếu"/>
         </ComboBox>
         
         <StackPanel Orientation="Horizontal" 

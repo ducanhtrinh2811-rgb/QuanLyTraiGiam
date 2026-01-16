@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\correctional-insight\\wpf-frontend\\PrisonManagement\\PrisonManagement.csproj": {}
+    "D:\\QLTG\\FE\\PrisonManagement\\PrisonManagement.csproj": {}
   },
   "projects": {
-    "D:\\correctional-insight\\wpf-frontend\\PrisonManagement\\PrisonManagement.csproj": {
+    "D:\\QLTG\\FE\\PrisonManagement\\PrisonManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\correctional-insight\\wpf-frontend\\PrisonManagement\\PrisonManagement.csproj",
+        "projectUniqueName": "D:\\QLTG\\FE\\PrisonManagement\\PrisonManagement.csproj",
         "projectName": "PrisonManagement",
-        "projectPath": "D:\\correctional-insight\\wpf-frontend\\PrisonManagement\\PrisonManagement.csproj",
+        "projectPath": "D:\\QLTG\\FE\\PrisonManagement\\PrisonManagement.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\correctional-insight\\wpf-frontend\\PrisonManagement\\obj\\",
+        "outputPath": "D:\\QLTG\\FE\\PrisonManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -63,19 +63,19 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
+              "version": "[8.0.23, 8.0.23]"
             },
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.22, 8.0.22]"
+              "version": "[8.0.23, 8.0.23]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
+              "version": "[8.0.23, 8.0.23]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
+              "version": "[8.0.23, 8.0.23]"
             }
           ],
           "frameworkReferences": {
@@ -86,7 +86,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
